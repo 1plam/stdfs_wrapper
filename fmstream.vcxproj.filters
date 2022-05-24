@@ -21,6 +21,24 @@
     <ClCompile Include="src\FileManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\handles\AppendFileHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\handles\AppendBinaryFileHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\handles\ReadFileHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\handles\WriteFileHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\handles\ReadBinaryFileHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\handles\WriteBinaryFileHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\include\ThreadPool.h">
@@ -29,7 +47,7 @@
     <ClInclude Include="dependencies\include\SingletonThreadPool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\FileHandle.cpp">
+    <ClInclude Include="src\handles\FileHandle.cpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\FileManager.h">

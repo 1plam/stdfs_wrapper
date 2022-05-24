@@ -130,11 +130,17 @@
   <ItemGroup>
     <ClCompile Include="src\FileManager.cpp" />
     <ClCompile Include="src\fmstream.cpp" />
+    <ClCompile Include="src\handles\AppendBinaryFileHandle.cpp" />
+    <ClCompile Include="src\handles\AppendFileHandle.cpp" />
+    <ClCompile Include="src\handles\ReadBinaryFileHandle.cpp" />
+    <ClCompile Include="src\handles\ReadFileHandle.cpp" />
+    <ClCompile Include="src\handles\WriteBinaryFileHandle.cpp" />
+    <ClCompile Include="src\handles\WriteFileHandle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\include\SingletonThreadPool.h" />
     <ClInclude Include="dependencies\include\ThreadPool.h" />
-    <ClInclude Include="src\FileHandle.cpp" />
+    <ClInclude Include="src\handles\FileHandle.cpp" />
     <ClInclude Include="src\FileManager.h" />
     <ClInclude Include="src\ForwardDeclaration.h" />
   </ItemGroup>
