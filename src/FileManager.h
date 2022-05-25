@@ -98,23 +98,23 @@ namespace File_Manager {
 			AppendBinaryFileHandle(const std::filesystem::path& pathToFile);
 			~AppendBinaryFileHandle() = default;
 		};
-	private:
+    protected:
 		enum RequestType {
 			READ,
 			WRITE
 		};
 
 		enum RequestHandleType {
-			READ,
-			WRITE,
-			APPEND,
+			READFILE,
+			WRITEFILE,
+			APPENDFILE,
 			READBINARY,
 			WRITEBINARY,
 			APPENDBINARY
 		};
 
-		using readFileCallback = std::function<void(std::unique_ptr<ReadFileHandle>)&&>;
-		using writeFileCallback = std::function<void(std::unique_ptr<WriteFileHandle>)&&>;
+		using readFileCallback = std::function<void(std::unique_ptr<ReadFileHandle>&&)>;
+		using writeFileCallback = std::function<void(std::unique_ptr<WriteFileHandle>&&)>;
 		using fileCallBack = std::variant<readFileCallback, writeFileCallback>;
 
 		struct RequestStruct {
@@ -122,7 +122,7 @@ namespace File_Manager {
 			RequestHandleType handleType;
 			std::function<void()> onEndCallback;
 
-			RequestStruct(fileCallBack&& callback, const std::function<void()>& onEndCallback, RequestHandleType handleType);
+            RequestStruct(fileCallBack&& callback, std::function<void()> onEndCallback, RequestHandleType handleType);
 		};
 
 		friend bool operator==(const RequestStruct& request, RequestType type);

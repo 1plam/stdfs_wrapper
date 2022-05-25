@@ -128,8 +128,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\exceptions\BaseException.cpp" />
+    <ClCompile Include="src\exceptions\FileDoesNotExistException.cpp" />
+    <ClCompile Include="src\exceptions\NotAFileException.cpp" />
     <ClCompile Include="src\FileManager.cpp" />
-    <ClCompile Include="src\fmstream.cpp" />
     <ClCompile Include="src\handles\AppendBinaryFileHandle.cpp" />
     <ClCompile Include="src\handles\AppendFileHandle.cpp" />
     <ClCompile Include="src\handles\ReadBinaryFileHandle.cpp" />
@@ -140,6 +142,9 @@
   <ItemGroup>
     <ClInclude Include="dependencies\include\SingletonThreadPool.h" />
     <ClInclude Include="dependencies\include\ThreadPool.h" />
+    <ClInclude Include="src\exceptions\BaseException.h" />
+    <ClInclude Include="src\exceptions\FileDoesNotExistException.h" />
+    <ClInclude Include="src\exceptions\NotAFileException.h" />
     <ClInclude Include="src\handles\FileHandle.cpp" />
     <ClInclude Include="src\FileManager.h" />
     <ClInclude Include="src\ForwardDeclaration.h" />
