@@ -19,7 +19,6 @@
 #endif
 
 namespace File_Manager {
-	/// Singleton, files access from multiple threads
 	class FILE_MANAGER_API FileManager {
 	private:
 		struct pathHash {
