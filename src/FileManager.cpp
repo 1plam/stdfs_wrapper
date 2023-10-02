@@ -14,13 +14,11 @@ namespace File_Manager {
     File_Manager::FileManager::filePathState::filePathState()
         : readRequests(0), isWriteRequest(false)
     {
-
     }
 
     File_Manager::FileManager::RequestStruct::RequestStruct(fileCallBack&& callback, std::function<void()> onEndCallback, RequestHandleType handleType)
         : callback(std::move(callback)), onEndCallback(std::move(onEndCallback)), handleType(handleType)
     {
-
     }
 
     bool operator==(const File_Manager::FileManager::RequestStruct& request, File_Manager::FileManager::RequestType type) {
@@ -53,6 +51,4 @@ namespace File_Manager {
         std::lock_guard<std::mutex> lockGuard(requestsMutex);
         requests[pathToFile].push(RequestStruct(std::move(callback), onEndCallback, handleType));
     }
-
-    // todo: LOOK AT SIDE PANEL
 }
